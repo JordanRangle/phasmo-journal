@@ -1,0 +1,15 @@
+<div class="evidence-wpr">
+    <div class="evidence-type">
+        <label *ngFor="let item of evidence" [for]="item.shortName">
+            <input type="checkbox" [name]="item.shortName" [id]="item.shortName" [attr.data-cancels]="item.cancels" (change)="evidenceSelect($event.target)">
+            <span> {{item.name}}</span>
+        </label>
+    </div>
+    <div class="ghost-list">
+        <h2>list of ghosts goes here</h2>
+        <ul>
+            <li *ngFor="let ghost of filteredGhosts" class="ghost" [attr.data-name]="ghost.name" [attr.data-evidence]="setEvidenceData(ghost)" [class.hidden]="!ghost.visible">{{ghost.name}}</li>
+        </ul>
+        <p *ngIf="!filteredGhosts.length">No ghosts match your seleted filters.</p>
+    </div>
+</div>
