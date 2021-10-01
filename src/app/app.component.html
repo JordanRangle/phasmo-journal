@@ -1,8 +1,8 @@
 <h1>{{title}}</h1>
 
 <nav>
-  <a routerLink="/evidence">Evidence</a>
-  <a routerLink="/ghosts">Ghosts</a>
+  <a routerLink="/evidence" [routerLinkActive]="'is-active'">Evidence</a>
+  <a routerLink="/ghosts" [routerLinkActive]="'is-active'">Ghosts</a>
 </nav>
 <router-outlet></router-outlet>
 <!-- <app-messages></app-messages> -->

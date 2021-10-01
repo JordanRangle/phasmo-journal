@@ -1,15 +1,40 @@
-<div class="evidence-wpr">
-    <div class="evidence-type">
-        <label *ngFor="let item of evidence" [for]="item.shortName">
-            <input type="checkbox" [name]="item.shortName" [id]="item.shortName" [attr.data-cancels]="item.cancels" (change)="evidenceSelect($event.target)">
-            <span> {{item.name}}</span>
-        </label>
+<div class="journal">
+    <div class="journal-left">
+        <div class="evidence-item" *ngFor="let item of evidence">
+            <div class="evidence-img">
+                <!-- <span style='background-image:url({{item.imgurl}})'></span> -->
+                <span style='background-image:url({{item.imgurl}})'></span>
+                
+                <!-- <img [src]="item.imgurl" [alt]="item.name"> -->
+            </div>
+            <div class="evidence-name">{{item.name}}</div>
+        </div>
     </div>
-    <div class="ghost-list">
-        <h2>list of ghosts goes here</h2>
-        <ul>
-            <li *ngFor="let ghost of filteredGhosts" class="ghost" [attr.data-name]="ghost.name" [attr.data-evidence]="setEvidenceData(ghost)" [class.hidden]="!ghost.visible">{{ghost.name}}</li>
-        </ul>
-        <p *ngIf="!filteredGhosts.length">No ghosts match your seleted filters.</p>
+    <div class="journal-right">
+        <div class="evidence">
+            <h2>Evidence</h2>
+            <div class="filters">
+                <label *ngFor="let item of evidence" [for]="item.shortName">
+                    <i class="far fa-square"></i>
+                    <input type="checkbox" [name]="item.shortName" [id]="item.shortName" [attr.data-cancels]="item.cancels"
+                        (change)="evidenceSelect($event.target)">
+                    <span> {{item.name}}</span>
+                </label>
+            </div>
+        </div>
+        <div class="ghosts-list">
+            <h2 *ngIf="filteredGhosts.length > 1">Potential Ghosts</h2>
+            <h2 *ngIf="filteredGhosts.length === 1">Your ghost is a...</h2>
+            <div class="list-wpr">
+                <div *ngFor="let ghost of filteredGhosts" class="ghost" [attr.data-name]="ghost.name"
+                    [attr.data-evidence]="setEvidenceData(ghost)" [class.hidden]="!ghost.visible">
+                    <div class="ghost-name">{{ghost.name}}</div>
+                    <div class="ghost-evi">
+                        <span *ngFor="let evi of ghost.evidence">{{evi}}</span>
+                    </div>
+                </div>
+            </div>
+            <p *ngIf="!filteredGhosts.length">No ghosts match your seleted filters.</p>
+        </div>
     </div>
 </div>

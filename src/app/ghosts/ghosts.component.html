@@ -1,4 +1,26 @@
-<h2>list of ghosts</h2>
-<ul>
-    <li *ngFor="let ghost of ghosts">{{ghost.name}}</li>
-</ul>
+<div class="journal">
+    <div class="journal-left">
+        <h2>Ghosts</h2>
+        <div class="ghosts-list">
+            <button type="button" *ngFor="let ghost of ghosts" (click)="selectGhost(ghost)">{{ghost.name}}</button>
+        </div>
+    </div>
+    <div class="journal-right">
+        <div class="no-ghost" *ngIf="!selectedGhost">
+            <div>
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div>
+                <h2>Select a ghost</h2>
+                <i class="fa-solid fa-ghost"></i>
+            </div>
+
+        </div>
+
+        <div class="ghost" *ngIf="selectedGhost">
+            <h2>{{selectedGhost.name}}</h2>
+            <div class="ghost-name"></div>
+            <div class="ghost-description" [innerHTML]="selectedGhost.description"></div>
+        </div>
+    </div>
+</div>

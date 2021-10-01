@@ -1,8 +1,8 @@
 import { EvidenceService } from './../evidence-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Evidence } from '../evidence-interface';
-import { EVIDENCELIST } from '../mock-evidence';
 
+import { GhostService } from '../ghost-service.service';
 import { Ghost } from '../ghost-interface';
 import { GHOSTS } from '../mock-ghosts';
 
@@ -14,23 +14,27 @@ import { GHOSTS } from '../mock-ghosts';
 export class EvidenceComponent implements OnInit {
   evidence: Evidence[] = [];
   selectedEvidence: string[] = [];
+  ghosts: Ghost[] = [];
+  filteredGhosts: Ghost[] = [];
 
-  constructor(private evidenceService: EvidenceService) { }
+  constructor(private evidenceService: EvidenceService, private ghostService: GhostService) { }
 
   ngOnInit(): void {
     this.getEvidence();
-    this.filteredGhosts = this.ghosts;
+    this.getGhosts();
   }
 
   getEvidence(): void {
-    // this.evidenceService.getEvidence().subscribe(evidence => this.evidence = evidence);
-    this.evidence = EVIDENCELIST;
+    this.evidenceService.getEvidence().subscribe(evidence => this.evidence = evidence);
   }
 
-  // getGhosts(): void {}
-  ghosts: Ghost[] = GHOSTS;
-  filteredGhosts: Ghost[] = [];
-
+  getGhosts(): void {
+    this.ghostService.getGhosts().subscribe(ghosts => {
+      this.ghosts = ghosts;
+      this.filteredGhosts = ghosts;
+    });
+  }
+  
   setEvidenceData(ghost: Ghost) {
     return ghost.evidence.toString();
   }
@@ -63,43 +67,10 @@ export class EvidenceComponent implements OnInit {
     this.filteredGhosts = [];
     
     this.ghosts.forEach(ghost => {
-      // if (ghost.evidence.some(item => this.selectedEvidence.includes(item))) {
-      //   this.filteredGhosts.push(ghost);
-      // }
       if (this.selectedEvidence.every(item => ghost.evidence.includes(item))) {
         this.filteredGhosts.push(ghost);
       }
     });
-
-    this.selectedEvidence.forEach(item => {
-      // this.ghosts.forEach(ghost => {
-      //   if (ghost.evidence.includes(item)) {
-      //     this.filteredGhosts.push(ghost);
-      //   }
-      // })
-
-
-
-      // if(ghost.evidence.includes(item)){
-      //   return true;
-      // }
-      // else {
-      //   return false;
-      // }
-    })
   }
-
-  disableCheck(id: number): void {
-    if (id) {
-
-    }
-  }
-
-  
-  // freezing (no conflicts)
-
-  // if option A is checked, uncheck option B and disable the input
-  // do the opposite when option A is unchecked
-  // style the ghost list to cross out the ghosts that do not match the evidence
 
 }
