@@ -2,9 +2,6 @@
     <div class="journal-left">
         <div class="evidence-item" *ngFor="let item of evidence">
             <div class="evidence-img">
-                <!-- <span style='background-image:url({{item.imgurl}})'></span> -->
-                <!-- <span style='background-image:url({{item.imgurl}})'></span> -->
-                
                 <img [src]="item.imgurl" [alt]="item.name">
             </div>
             <div class="evidence-name">{{item.name}}</div>
@@ -16,10 +13,12 @@
             <div class="filters">
                 <label *ngFor="let item of evidence" [for]="item.shortName">
                     <i class="far fa-square"></i>
-                    <input type="checkbox" [name]="item.shortName" [id]="item.shortName" [attr.data-cancels]="item.cancels"
+                    <input #checkboxes type="checkbox" [name]="item.shortName" [id]="item.shortName" [attr.data-cancels]="item.cancels"
                         (change)="evidenceSelect($event.target)">
                     <span> {{item.name}}</span>
                 </label>
+                <br>
+                <button [disabled]="!selectedEvidence.length" class="reset-btn" type="button" (click)="resetEvidence()">Reset</button>
             </div>
         </div>
         <div class="ghosts-list">
