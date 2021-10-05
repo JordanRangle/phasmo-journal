@@ -22,7 +22,7 @@ export class GhostsComponent implements OnInit {
 
   constructor(private ghostService: GhostService, private store: Store<AppState>) {
     this.newGhost = store.select('ghost');
-    console.log('newGhost', this.newGhost);
+    // console.log('newGhost', this.newGhost);
   }
 
   ngOnInit(): void {

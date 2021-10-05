@@ -1,8 +1,19 @@
 <h1>{{title}}</h1>
 
 <nav>
-  <a routerLink="/evidence" [routerLinkActive]="'is-active'">Evidence</a>
+  <!-- <a routerLink="/evidence" [routerLinkActive]="'is-active'">Evidence</a> -->
+  <a routerLink="/examples" [routerLinkActive]="'is-active'">Examples</a>
   <a routerLink="/ghosts" [routerLinkActive]="'is-active'">Ghosts</a>
+  <a routerLink="/ouija" [routerLinkActive]="'is-active'">Ouija</a>
+  <a routerLink="/spiritbox" [routerLinkActive]="'is-active'">Spirit Box</a>
 </nav>
-<router-outlet></router-outlet>
+<div class="journal">
+  <div class="journal-left">
+    <router-outlet></router-outlet>
+
+  </div>
+  <div class="journal-right">
+    <app-evidence></app-evidence>
+  </div>
+</div>
 <!-- <app-messages></app-messages> -->

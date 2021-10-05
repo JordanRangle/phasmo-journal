@@ -1,0 +1,10 @@
+<div class="ouija-wpr">
+    <div class="question-main" *ngFor="let item of ouijaQuestions">
+        <h2>{{item.title}}</h2>
+        <ul class="questions">
+            <li class="question" *ngFor="let question of item.questions">
+                {{question}}
+            </li>
+        </ul>
+    </div>
+</div>

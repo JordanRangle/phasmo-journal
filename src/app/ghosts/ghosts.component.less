@@ -1,14 +1,15 @@
-.journal-left {
+.ghosts-wpr {
     .ghosts-list {
         display: flex;
         flex-wrap: wrap;
         gap: 15px;
+        border-bottom:2px solid black;
+        padding-bottom:15px;
 
         button {
             width:30%;
             font-size:1.2rem;
-            // border:1px solid #00000020;
-            // background:#fcba0380;
+
             border: none;
             background: transparent;
             padding:10px;
@@ -27,36 +28,16 @@
             }
 
             &:hover {
-                // background:#fcba03;
                 cursor: pointer;
-
-                // &::after {
-                //     content: "";
-                //     height: 115px;
-                //     width: 70%;
-                //     /* background: black; */
-                //     position: absolute;
-                //     left: 35px;
-                //     top: 25px;
-                //     transform: rotate(85deg);
-                //     box-shadow: 12px -1px 0px -9px #000000 inset;
-                //     border-radius: 37%;
-                // }
             }
 
-
-            
-
-                &:hover::after,
-                &:focus::after {
-                    opacity: 1;
-                    transform: translate3d(0, 0.2em, 0);
-                }
+            &:hover::after,
+            &:focus::after {
+                opacity: 1;
+                transform: translate3d(0, 0.2em, 0);
+            }
         }
     }
-}
-
-.journal-right {
 
     .no-ghost {
         display:flex;
@@ -65,22 +46,22 @@
         align-items: center;
         height:100%;
         text-align: center;
-
+    
         i {
             font-size:3rem;
             margin-bottom:20px;
         }
-
-        @media screen and (min-width:768px) {
-            .arrow {
-                i {
-                    transform: rotate(270deg);
-                }
-            }
-        }
+    
+        // @media screen and (min-width:768px) {
+        //     .arrow {
+        //         i {
+        //             transform: rotate(270deg);
+        //         }
+        //     }
+        // }
     }
-
-
+    
+    
     p {
         margin-bottom:20px;
     
@@ -89,4 +70,8 @@
             font-size: 1.2rem;
         }
     }
+}
+
+.journal-right {
+
 }

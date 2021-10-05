@@ -11,13 +11,19 @@ import { EvidenceComponent } from './evidence/evidence.component';
 import { GhostsComponent } from './ghosts/ghosts.component';
 import { GhostDetailComponent } from './ghost-detail/ghost-detail.component';
 import { reducer } from './ghosts/store/ghosts-reducer';
+import { ExamplesComponent } from './examples/examples.component';
+import { OuijaComponent } from './ouija/ouija.component';
+import { SpiritBoxComponent } from './spirit-box/spirit-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EvidenceComponent,
     GhostsComponent,
-    GhostDetailComponent
+    GhostDetailComponent,
+    ExamplesComponent,
+    OuijaComponent,
+    SpiritBoxComponent
   ],
   imports: [
     BrowserModule,

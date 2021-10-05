@@ -1,0 +1,38 @@
+.examples-wpr {
+    gap: 15px;
+    // display:flex;
+    // flex-wrap: wrap;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, 225px);
+
+    .evidence-item {
+        border: 1px solid #000;
+        display:flex;
+        flex-direction: column;
+        background: #efeeeee0;
+        height:256px;
+        // transform: rotate(5deg);
+
+        .evidence-img {
+            border-bottom:1px solid #000;
+            flex-grow: 2;
+            padding:10px;
+
+            // temp element until images are added
+            img {
+                background: black;
+                width: 100%;
+                height: 100%;
+                // content: "";
+                // display: block;
+                // background-repeat: no-repeat;
+                // background-size: cover;
+                // background-position: center;
+            }
+        }
+        .evidence-name {
+            text-align: center;
+            padding:10px;
+        }
+    }
+}

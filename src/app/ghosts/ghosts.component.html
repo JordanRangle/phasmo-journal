@@ -1,27 +1,21 @@
-<div class="journal">
-    <div class="journal-left">
-        <h2>Ghosts</h2>
-        <div class="ghosts-list">
-            <button type="button" *ngFor="let ghost of ghosts" (click)="selectGhost(ghost)">{{ghost.name}}</button>
+<div class="ghosts-wpr">
+    <h2>Ghosts</h2>
+    <div class="ghosts-list">
+        <button type="button" *ngFor="let ghost of ghosts" (click)="selectGhost(ghost)">{{ghost.name}}</button>
+    </div>
+    <div class="no-ghost" *ngIf="!selectedGhost">
+        <div class="arrow">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <div>
+            <h2>Select a ghost</h2>
+            <i class="fa-solid fa-ghost"></i>
         </div>
     </div>
-    <div class="journal-right">
-        <div class="no-ghost" *ngIf="!selectedGhost">
-            <div class="arrow">
-                <!-- <i class="fa-solid fa-arrow-left"></i> -->
-                <i class="fa-solid fa-arrow-up"></i>
-            </div>
-            <div>
-                <h2>Select a ghost</h2>
-                <i class="fa-solid fa-ghost"></i>
-            </div>
-
-        </div>
-
-        <div class="ghost" *ngIf="selectedGhost">
-            <h2>{{selectedGhost.name}}</h2>
-            <div class="ghost-name"></div>
-            <div class="ghost-description" [innerHTML]="selectedGhost.description"></div>
-        </div>
+    
+    <div class="ghost" *ngIf="selectedGhost">
+        <h2>{{selectedGhost.name}}</h2>
+        <div class="ghost-name"></div>
+        <div class="ghost-description" [innerHTML]="selectedGhost.description"></div>
     </div>
 </div>
