@@ -13,8 +13,8 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 2, name: 'Ghost Orbs', shortName: 'orb', cancels: 'emf5', imgurl: './assets/images/ghostorb.jpeg' },
       { id: 3, name: 'Spirit Box', shortName: 'box', cancels: 'freezing', imgurl: './assets/images/spiritbox.jpeg' },
       { id: 4, name: 'Freezing Tempatures', shortName: 'freezing', cancels: 'box', imgurl: './assets/images/freezingtemps.jpeg' },
-      { id: 6, name: 'D.O.T.S. Projector', shortName: 'dots', cancels: 'writing', imgurl: './assets/images/ghostwriting.jpeg' },
-      { id: 5, name: 'Ghost Writing', shortName: 'writing', cancels: 'dots', imgurl: './assets/images/dots.jpeg' },
+      { id: 6, name: 'D.O.T.S. Projector', shortName: 'dots', cancels: 'writing', imgurl: './assets/images/dots.jpeg' },
+      { id: 5, name: 'Ghost Writing', shortName: 'writing', cancels: 'dots', imgurl: './assets/images/ghostwriting.jpeg' },
       { id: 7, name: 'Fingerprints', shortName: 'prints', imgurl: './assets/images/fingerprints.jpeg' }
     ];
 
