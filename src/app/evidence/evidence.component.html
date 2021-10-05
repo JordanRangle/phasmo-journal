@@ -3,9 +3,9 @@
         <div class="evidence-item" *ngFor="let item of evidence">
             <div class="evidence-img">
                 <!-- <span style='background-image:url({{item.imgurl}})'></span> -->
-                <span style='background-image:url({{item.imgurl}})'></span>
+                <!-- <span style='background-image:url({{item.imgurl}})'></span> -->
                 
-                <!-- <img [src]="item.imgurl" [alt]="item.name"> -->
+                <img [src]="item.imgurl" [alt]="item.name">
             </div>
             <div class="evidence-name">{{item.name}}</div>
         </div>
