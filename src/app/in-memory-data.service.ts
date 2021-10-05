@@ -9,13 +9,13 @@ import { Ghost } from './ghost-interface';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const evidence = [
-      { id: 1, name: 'EMF 5', shortName: 'emf5', cancels: 'orb', imgurl: 'https://i.redd.it/tws214wbp0b61.png' },
-      { id: 2, name: 'Ghost Orbs', shortName: 'orb', cancels: 'emf5', imgurl: 'https://gamertweak.com/wp-content/uploads/2020/10/phasmophobia-ghost-orb-example.jpg' },
-      { id: 3, name: 'Spirit Box', shortName: 'box', cancels: 'freezing', imgurl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn-JTCdsCCog9dDCPCYKnf_J3Ni9uls8vFcQ&usqp=CAU' },
-      { id: 4, name: 'Freezing Tempatures', shortName: 'freezing', cancels: 'box', imgurl: 'https://lh3.googleusercontent.com/proxy/yejCOB7USx1TLGQzIazzQkRjfrH5-NdzgUXl4IkVXHTHXn0Xn0xqa_kstitucJrlY3JgPoOKl5KxGH3P-4ZnOnXfqk5EvJg1aOpDmn5EZgLXAo20yWxvgPC7TngxFWFc3qAL8PBkXnGanHIIL7yQWcqnySolJ0zy7ITNhx6p_Y9Dk_BbFHO4RagA7M05' },
-      { id: 5, name: 'Ghost Writing', shortName: 'writing', cancels: 'dots', imgurl: 'https://i.redd.it/euradofdf9k71.jpg' },
-      { id: 6, name: 'D.O.T.S. Projector', shortName: 'dots', cancels: 'writing', imgurl: 'https://static0.srcdn.com/wordpress/wp-content/uploads/2021/08/Phasmophobia-Goryo-Ghost-Guide.jpg' },
-      { id: 7, name: 'Fingerprints', shortName: 'prints', imgurl: 'https://lh3.googleusercontent.com/proxy/5YzJmu2i8ho5tJ6imp3RHvPfjirjAdpv1ijIYKNyQjee5mTM3lip9CIhL2sDFQVyc6JNmE7Djg9fIEjh7LdOiKBmXHBnB8UsWZu9mMH_-ZrR4X5wCoL2GR0Lh81F0Cr-0dJ1z6mIoN-J2bsH_1bz_XOnky4PQqjH6FUugT8KD3s' }
+      { id: 1, name: 'EMF 5', shortName: 'emf5', cancels: 'orb', imgurl: './assets/images/emf5.png' },
+      { id: 2, name: 'Ghost Orbs', shortName: 'orb', cancels: 'emf5', imgurl: './assets/images/ghostorb.jpeg' },
+      { id: 3, name: 'Spirit Box', shortName: 'box', cancels: 'freezing', imgurl: './assets/images/spiritbox.jpeg' },
+      { id: 4, name: 'Freezing Tempatures', shortName: 'freezing', cancels: 'box', imgurl: './assets/images/freezingtemps.jpeg' },
+      { id: 5, name: 'Ghost Writing', shortName: 'writing', cancels: 'dots', imgurl: './assets/images/dots.jpeg' },
+      { id: 6, name: 'D.O.T.S. Projector', shortName: 'dots', cancels: 'writing', imgurl: './assets/images/ghostwriting.jpeg' },
+      { id: 7, name: 'Fingerprints', shortName: 'prints', imgurl: './assets/images/fingerprints.jpeg' }
     ];
 
     const ghosts = [
