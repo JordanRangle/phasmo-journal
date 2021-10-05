@@ -1,5 +1,5 @@
 import { EvidenceService } from './../evidence-service.service';
-import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, OnInit, Query, QueryList, ViewChildren } from '@angular/core';
 import { Evidence } from '../evidence-interface';
 
 import { GhostService } from '../ghost-service.service';
@@ -75,10 +75,6 @@ export class EvidenceComponent implements OnInit {
 
   // @ViewChildren("checkboxes") checkboxes: QueryList<ElementRef>;
   @ViewChildren("checkboxes") checkboxes: any;
-
-  uncheckAll() {
-    
-  }
 
   resetEvidence() {
     this.filteredGhosts = this.ghosts;
