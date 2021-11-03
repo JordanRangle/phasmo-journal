@@ -16,5 +16,9 @@ export const GHOSTS: Ghost[] = [
     { id: 13, name: 'Spirit', evidence: ['emf5', 'box', 'writing'], description: '...', visible: true},
     { id: 14, name: 'Wraith', evidence: ['emf5', 'box', 'dots'], description: '...', visible: true},
     { id: 15, name: 'Yokai', evidence: ['orb', 'box', 'dots'], description: '...', visible: true},
-    { id: 16, name: 'Yurei', evidence: ['orb', 'freezing', 'dots'], description: '...', visible: true}
+    { id: 16, name: 'Yurei', evidence: ['orb', 'freezing', 'dots'], description: '...', visible: true},
+    { id: 16, name: 'Onryo', evidence: ['orb', 'freezing', 'dots'], description: '...', visible: true },
+    { id: 16, name: 'The Twins', evidence: ['orb', 'freezing', 'dots'], description: '...', visible: true },
+    { id: 16, name: 'Obake', evidence: ['orb', 'emf5', 'prints'], description: '...', visible: true },
+    { id: 16, name: 'Raiju', evidence: ['orb', 'freezing', 'dots'], description: '...', visible: true },
 ]

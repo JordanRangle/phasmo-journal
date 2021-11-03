@@ -9,10 +9,10 @@ import { Ghost } from './ghost-interface';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const evidence = [
-      { id: 1, name: 'EMF 5', shortName: 'emf5', cancels: 'orb', imgurl: './assets/images/emf5.png' },
-      { id: 2, name: 'Ghost Orbs', shortName: 'orb', cancels: 'emf5', imgurl: './assets/images/ghostorb.jpeg' },
-      { id: 3, name: 'Spirit Box', shortName: 'box', cancels: 'freezing', imgurl: './assets/images/spiritbox.jpeg' },
-      { id: 4, name: 'Freezing Tempatures', shortName: 'freezing', cancels: 'box', imgurl: './assets/images/freezingtemps.jpeg' },
+      { id: 1, name: 'EMF 5', shortName: 'emf5', imgurl: './assets/images/emf5.png' },
+      { id: 2, name: 'Ghost Orbs', shortName: 'orb', imgurl: './assets/images/ghostorb.jpeg' },
+      { id: 3, name: 'Spirit Box', shortName: 'box', imgurl: './assets/images/spiritbox.jpeg' },
+      { id: 4, name: 'Freezing Tempatures', shortName: 'freezing', imgurl: './assets/images/freezingtemps.jpeg' },
       { id: 6, name: 'D.O.T.S. Projector', shortName: 'dots', cancels: 'writing', imgurl: './assets/images/dots.jpeg' },
       { id: 5, name: 'Ghost Writing', shortName: 'writing', cancels: 'dots', imgurl: './assets/images/ghostwriting.jpeg' },
       { id: 7, name: 'Fingerprints', shortName: 'prints', imgurl: './assets/images/fingerprints.jpeg' }
@@ -34,7 +34,11 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 13, name: 'Spirit', evidence: ['emf5', 'box', 'writing'], description: "<p>Unique Strengths: <br />Nothing</p><p>Weaknesses: <br />A Spirit can temporarily be stopped by burning Smudge Sticks near them.</p><p>Evidence: <br />EMF Level 5, Ghost Writing, Spirit Box</p>", visible: true },
       { id: 14, name: 'Wraith', evidence: ['emf5', 'box', 'dots'], description: "<p>Unique Strengths: <br />Wraiths almost never touch the ground meaning it can't be tracked by footsteps.</p><p>Weaknesses: <br />Wraiths have a toxic reaction to Salt.</p><p>Evidence: <br />EMF Level 5, Spirit Box, DOTS Projector</p>", visible: true },
       { id: 15, name: 'Yokai', evidence: ['orb', 'box', 'dots'], description: "<p>Unique Strengths: <br />Talking near a Yokai will anger it, increasing the chance of an attack.</p><p>Weaknesses: <br />When hunting a Yokai can only hear voices close to it.</p><p>Evidence: <br />Ghost Orbs, Spirit Box, DOTS Projector</p>", visible: true },
-      { id: 16, name: 'Yurei', evidence: ['orb', 'freezing', 'dots'], description: "<p>Unique Strengths: <br />Yurei's have been known to have a stronger effect on people sanity.</p><p>Weaknesses: <br />Smudging the Yurei's place of death will trap it temporarily, reducing how much it wanders.</p><p>Evidence: <br />Ghost Orbs, Freezing Temperatures, DOTS Projector</p>", visible: true }
+      { id: 16, name: 'Yurei', evidence: ['orb', 'freezing', 'dots'], description: "<p>Unique Strengths: <br />Yurei's have been known to have a stronger effect on people sanity.</p><p>Weaknesses: <br />Smudging the Yurei's place of death will trap it temporarily, reducing how much it wanders.</p><p>Evidence: <br />Ghost Orbs, Freezing Temperatures, DOTS Projector</p>", visible: true },
+      { id: 17, name: 'Obake', evidence: ['orb', 'emf5', 'prints'], description: "<p>Unique Strengths: <br />When interacting with the environment, an Obake will rarely leave a trace.</p><p>Weaknesses: <br />Sometimes this ghost will shapeshift, leaving behind unique evidence.</p><p>Evidence: <br />Ghost Orbs, EMF Level 5, Finger Prints</p>", visible: true },
+      { id: 18, name: 'The Twins', evidence: ['box', 'emf5', 'freezing'], description: "<p>Unique Strengths: <br />Either Twin can be angered and initiate an attack on their prey.</p><p>Weaknesses: <br />The Twins will often interact with the environment at the same time.</p><p>Evidence: <br />EMF Level 5, Spirit Box, Freezing Temperatures</p>", visible: true },
+      { id: 19, name: 'Onryo', evidence: ['box', 'orb', 'freezing'], description: "<p>Unique Strengths: <br />Extinguishing a flame can cause an Onryo to attack.</p><p>Weaknesses: <br />When threatened, this ghost will be less likely to attack.</p><p>Evidence: <br />Spirit Box, Ghost Orbs, Freezing Temperatures</p>", visible: true },
+      { id: 20, name: 'Raiju', evidence: ['orb', 'emf5', 'dots'], description: "<p>Unique Strengths: <br />EA Raiju can siphon power from nearby electrical devices, making it move faster.</p><p>Weaknesses: <br />Raiju are constantly disrupting electronic equipment, making it easier to track when attacking.</p><p>Evidence: <br />EMF Level 5, Ghots Orbs, D.O.T.S. Projector</p>", visible: true }
     ]
     return { evidence, ghosts };
   }
