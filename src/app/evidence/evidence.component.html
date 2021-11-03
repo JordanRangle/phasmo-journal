@@ -20,7 +20,7 @@
                 [attr.data-evidence]="setEvidenceData(ghost)" [class.hidden]="!ghost.visible">
                 <div class="ghost-name">{{ghost.name}}</div>
                 <div class="ghost-evi">
-                    <span *ngFor="let evi of ghost.evidence">{{evi}}</span>
+                    <span *ngFor="let evi of ghost.evidence" [class.evi-select]="selectedEvidence.indexOf(evi) >= 0">{{evi}}</span>
                 </div>
             </div>
         </div>
