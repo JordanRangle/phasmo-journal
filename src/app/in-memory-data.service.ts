@@ -19,27 +19,175 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
 
     const ghosts = [
-      { id: 1, name: 'Banshee', evidence: ['orb', 'prints', 'dots'], description: "<p>Unique Strengths: <br />A Banshee will only target one person at a time.</p><p>Weaknesses: <br />Banshees fear the Crucifix and will be less aggressive when near one.</p><p>Evidence: <br />Ghost Orbs, Fingerprints, DOTS Projector</p>", visible: true },
-      { id: 2, name: 'Demon', evidence: ['freezing', 'prints', 'writing'], description: "<p>Unique Strengths: <br />Demons will initiate hunts more often than other ghosts.</p><p>Weaknesses: <br />Getting Ouija Board responses from a Demon won't lower your sanity.</p><p>Evidence: <br />Freezing Temperatures, Ghost Writing, Fingerprints</p>", visible: true },
-      { id: 3, name: 'Goryo', evidence: ['emf5', 'prints', 'dots'], description: "<p>Unique Strengths: <br />A Goryo will usually only show itself on camera if there are no people nearby.</p><p>Weaknesses: <br />They are rarely seen far from their place of death.</p><p>Evidence: <br />EMF Level 5, Fingerprints, D.O.T.S. Projector</p>", visible: true },
-      { id: 4, name: 'Hantu', evidence: ['orb', 'freezing', 'prints'], description: "<p>Unique Strengths: <br />Lower temperatures allow the Hantu to move at faster speeds.</p><p>Weaknesses: <br />Hantus move slower in warmer areas.</p><p>Evidence: <br />Fingerprints, Ghost Orb, Freezing Temperatures</p>", visible: true },
-      { id: 5, name: 'Jinn', evidence: ['emf5', 'freezing', 'prints'], description: "<p>Unique Strengths: <br />A Jinn will travel at a faster speed if its victim is far away.</p><p>Weaknesses: <br />Turning off the locations power source will prevent the Jinn from using its ability.</p><p>Evidence: <br />EMF Level 5, Freezing Temperatures, Fingerprint</p>", visible: true },
-      { id: 6, name: 'Mare', evidence: ['orb', 'box', 'writing'], description: "<p>Unique Strengths: <br />A Mare will have an increased chance to attack in the dark.</p><p>Weaknesses: <br />Turning the lights on around the Mare will lower its chance to attack.</p><p>Evidence: <br />Ghost Orbs, Ghost Writing, Spirit Box</p>", visible: true },
-      { id: 7, name: 'Myling', evidence: ['emf5', 'prints', 'writing'], description: "<p>Unique Strengths: <br />A Myling is known to be quieter when hunting.</p><p>Weaknesses: <br />Mylings more frequently make paranormal sounds.</p><p>Evidence: <br />EMF Level 5, Fingerprints, Ghost Writing</p>", visible: true },
-      { id: 8, name: 'Oni', evidence: ['emf5', 'freezing', 'dots'], description: "<p>Unique Strengths: <br />Oni's are more active when people are nearby and have been seen moving objects at great speed.</p><p>Weaknesses: <br />Oni's are very active, making them easier to find.</p><p>Evidence: <br />EMF Level 5, Freezing Temperature, DOTS Projector</p>", visible: true },
-      { id: 9, name: 'Phantom', evidence: ['box', 'prints', 'dots'], description: "<p>Unique Strengths: <br />Looking at a Phantom will drop your sanity considerably faster.</p><p>Weaknesses: <br />Taking a photo of the Phantom will make it temporarily disappear.</p><p>Evidence: <br />Spirit Box, Fingerprints, DOTS Projector</p>", visible: true },
-      { id: 10, name: 'Poltergeist', evidence: ['box', 'prints', 'writing'], description: "<p>Unique Strengths: <br />Poltergeists can throw multiple objects at once.</p><p>Weaknesses: <br />With nothing to throw, Poltergeists become powerless.</p><p>Evidence: <br />Ghost Writing, Spirit Box, Fingerprints</p>", visible: true },
-      { id: 11, name: 'Revenant', evidence: ['orb', 'freezing', 'writing'], description: "<p>Unique Strengths: <br />A Revenant will travel significantly faster speed when hunting their prey.</p><p>Weaknesses: <br />Hiding from the Revenant will cause it to move very slowly.</p><p>Evidence: <br />Ghost Orbs, Ghost Writing, Freezing Temperatures</p>", visible: true },
-      { id: 12, name: 'Shade', evidence: ['emf5', 'freezing', 'writing'], description: "<p>Unique Strengths: <br />Shades are much harder to find.</p><p>Weaknesses: <br />The Ghost will not enter a hunt if there are multiple people nearby.</p><p>Evidence: <br />EMF 5, Ghost Writing, Freezing Temperatures</p>", visible: true },
-      { id: 13, name: 'Spirit', evidence: ['emf5', 'box', 'writing'], description: "<p>Unique Strengths: <br />Nothing</p><p>Weaknesses: <br />A Spirit can temporarily be stopped by burning Smudge Sticks near them.</p><p>Evidence: <br />EMF Level 5, Ghost Writing, Spirit Box</p>", visible: true },
-      { id: 14, name: 'Wraith', evidence: ['emf5', 'box', 'dots'], description: "<p>Unique Strengths: <br />Wraiths almost never touch the ground meaning it can't be tracked by footsteps.</p><p>Weaknesses: <br />Wraiths have a toxic reaction to Salt.</p><p>Evidence: <br />EMF Level 5, Spirit Box, DOTS Projector</p>", visible: true },
-      { id: 15, name: 'Yokai', evidence: ['orb', 'box', 'dots'], description: "<p>Unique Strengths: <br />Talking near a Yokai will anger it, increasing the chance of an attack.</p><p>Weaknesses: <br />When hunting a Yokai can only hear voices close to it.</p><p>Evidence: <br />Ghost Orbs, Spirit Box, DOTS Projector</p>", visible: true },
-      { id: 16, name: 'Yurei', evidence: ['orb', 'freezing', 'dots'], description: "<p>Unique Strengths: <br />Yurei's have been known to have a stronger effect on people sanity.</p><p>Weaknesses: <br />Smudging the Yurei's place of death will trap it temporarily, reducing how much it wanders.</p><p>Evidence: <br />Ghost Orbs, Freezing Temperatures, DOTS Projector</p>", visible: true },
-      { id: 17, name: 'Obake', evidence: ['orb', 'emf5', 'prints'], description: "<p>Unique Strengths: <br />When interacting with the environment, an Obake will rarely leave a trace.</p><p>Weaknesses: <br />Sometimes this ghost will shapeshift, leaving behind unique evidence.</p><p>Evidence: <br />Ghost Orbs, EMF Level 5, Finger Prints</p>", visible: true },
-      { id: 18, name: 'The Twins', evidence: ['box', 'emf5', 'freezing'], description: "<p>Unique Strengths: <br />Either Twin can be angered and initiate an attack on their prey.</p><p>Weaknesses: <br />The Twins will often interact with the environment at the same time.</p><p>Evidence: <br />EMF Level 5, Spirit Box, Freezing Temperatures</p>", visible: true },
-      { id: 19, name: 'Onryo', evidence: ['box', 'orb', 'freezing'], description: "<p>Unique Strengths: <br />Extinguishing a flame can cause an Onryo to attack.</p><p>Weaknesses: <br />When threatened, this ghost will be less likely to attack.</p><p>Evidence: <br />Spirit Box, Ghost Orbs, Freezing Temperatures</p>", visible: true },
-      { id: 20, name: 'Raiju', evidence: ['orb', 'emf5', 'dots'], description: "<p>Unique Strengths: <br />EA Raiju can siphon power from nearby electrical devices, making it move faster.</p><p>Weaknesses: <br />Raiju are constantly disrupting electronic equipment, making it easier to track when attacking.</p><p>Evidence: <br />EMF Level 5, Ghots Orbs, D.O.T.S. Projector</p>", visible: true }
-    ]
+      {
+        id: 1,
+        name: 'Banshee',
+        evidence: ['orb', 'prints', 'dots'],
+        description:
+          '<p>Unique Strengths: <br />A Banshee will only target one person at a time.</p><p>Weaknesses: <br />Banshees fear the Crucifix and will be less aggressive when near one.</p><p>Evidence: <br />Ghost Orbs, Fingerprints, DOTS Projector</p>',
+        visible: true,
+      },
+      {
+        id: 2,
+        name: 'Demon',
+        evidence: ['freezing', 'prints', 'writing'],
+        description:
+          "<p>Unique Strengths: <br />Demons will initiate hunts more often than other ghosts.</p><p>Weaknesses: <br />Getting Ouija Board responses from a Demon won't lower your sanity.</p><p>Evidence: <br />Freezing Temperatures, Ghost Writing, Fingerprints</p>",
+        visible: true,
+      },
+      {
+        id: 3,
+        name: 'Goryo',
+        evidence: ['emf5', 'prints', 'dots'],
+        description:
+          '<p>Unique Strengths: <br />A Goryo will usually only show itself on camera if there are no people nearby.</p><p>Weaknesses: <br />They are rarely seen far from their place of death.</p><p>Evidence: <br />EMF Level 5, Fingerprints, D.O.T.S. Projector</p>',
+        visible: true,
+      },
+      {
+        id: 4,
+        name: 'Hantu',
+        evidence: ['orb', 'freezing', 'prints'],
+        description:
+          '<p>Unique Strengths: <br />Lower temperatures allow the Hantu to move at faster speeds.</p><p>Weaknesses: <br />Hantus move slower in warmer areas.</p><p>Evidence: <br />Fingerprints, Ghost Orb, Freezing Temperatures</p>',
+        visible: true,
+      },
+      {
+        id: 5,
+        name: 'Jinn',
+        evidence: ['emf5', 'freezing', 'prints'],
+        description:
+          '<p>Unique Strengths: <br />A Jinn will travel at a faster speed if its victim is far away.</p><p>Weaknesses: <br />Turning off the locations power source will prevent the Jinn from using its ability.</p><p>Evidence: <br />EMF Level 5, Freezing Temperatures, Fingerprint</p>',
+        visible: true,
+      },
+      {
+        id: 6,
+        name: 'Mare',
+        evidence: ['orb', 'box', 'writing'],
+        description:
+          '<p>Unique Strengths: <br />A Mare will have an increased chance to attack in the dark.</p><p>Weaknesses: <br />Turning the lights on around the Mare will lower its chance to attack.</p><p>Evidence: <br />Ghost Orbs, Ghost Writing, Spirit Box</p>',
+        visible: true,
+      },
+      {
+        id: 7,
+        name: 'Myling',
+        evidence: ['emf5', 'prints', 'writing'],
+        description:
+          '<p>Unique Strengths: <br />A Myling is known to be quieter when hunting.</p><p>Weaknesses: <br />Mylings more frequently make paranormal sounds.</p><p>Evidence: <br />EMF Level 5, Fingerprints, Ghost Writing</p>',
+        visible: true,
+      },
+      {
+        id: 8,
+        name: 'Oni',
+        evidence: ['emf5', 'freezing', 'dots'],
+        description:
+          "<p>Unique Strengths: <br />Oni's are more active when people are nearby and have been seen moving objects at great speed.</p><p>Weaknesses: <br />Oni's are very active, making them easier to find.</p><p>Evidence: <br />EMF Level 5, Freezing Temperature, DOTS Projector</p>",
+        visible: true,
+      },
+      {
+        id: 9,
+        name: 'Phantom',
+        evidence: ['box', 'prints', 'dots'],
+        description:
+          '<p>Unique Strengths: <br />Looking at a Phantom will drop your sanity considerably faster.</p><p>Weaknesses: <br />Taking a photo of the Phantom will make it temporarily disappear.</p><p>Evidence: <br />Spirit Box, Fingerprints, DOTS Projector</p>',
+        visible: true,
+      },
+      {
+        id: 10,
+        name: 'Poltergeist',
+        evidence: ['box', 'prints', 'writing'],
+        description:
+          '<p>Unique Strengths: <br />Poltergeists can throw multiple objects at once.</p><p>Weaknesses: <br />With nothing to throw, Poltergeists become powerless.</p><p>Evidence: <br />Ghost Writing, Spirit Box, Fingerprints</p>',
+        visible: true,
+      },
+      {
+        id: 11,
+        name: 'Revenant',
+        evidence: ['orb', 'freezing', 'writing'],
+        description:
+          '<p>Unique Strengths: <br />A Revenant will travel significantly faster speed when hunting their prey.</p><p>Weaknesses: <br />Hiding from the Revenant will cause it to move very slowly.</p><p>Evidence: <br />Ghost Orbs, Ghost Writing, Freezing Temperatures</p>',
+        visible: true,
+      },
+      {
+        id: 12,
+        name: 'Shade',
+        evidence: ['emf5', 'freezing', 'writing'],
+        description:
+          '<p>Unique Strengths: <br />Shades are much harder to find.</p><p>Weaknesses: <br />The Ghost will not enter a hunt if there are multiple people nearby.</p><p>Evidence: <br />EMF 5, Ghost Writing, Freezing Temperatures</p>',
+        visible: true,
+      },
+      {
+        id: 13,
+        name: 'Spirit',
+        evidence: ['emf5', 'box', 'writing'],
+        description:
+          '<p>Unique Strengths: <br />Nothing</p><p>Weaknesses: <br />A Spirit can temporarily be stopped by burning Smudge Sticks near them.</p><p>Evidence: <br />EMF Level 5, Ghost Writing, Spirit Box</p>',
+        visible: true,
+      },
+      {
+        id: 14,
+        name: 'Wraith',
+        evidence: ['emf5', 'box', 'dots'],
+        description:
+          "<p>Unique Strengths: <br />Wraiths almost never touch the ground meaning it can't be tracked by footsteps.</p><p>Weaknesses: <br />Wraiths have a toxic reaction to Salt.</p><p>Evidence: <br />EMF Level 5, Spirit Box, DOTS Projector</p>",
+        visible: true,
+      },
+      {
+        id: 15,
+        name: 'Yokai',
+        evidence: ['orb', 'box', 'dots'],
+        description:
+          '<p>Unique Strengths: <br />Talking near a Yokai will anger it, increasing the chance of an attack.</p><p>Weaknesses: <br />When hunting a Yokai can only hear voices close to it.</p><p>Evidence: <br />Ghost Orbs, Spirit Box, DOTS Projector</p>',
+        visible: true,
+      },
+      {
+        id: 16,
+        name: 'Yurei',
+        evidence: ['orb', 'freezing', 'dots'],
+        description:
+          "<p>Unique Strengths: <br />Yurei's have been known to have a stronger effect on people sanity.</p><p>Weaknesses: <br />Smudging the Yurei's place of death will trap it temporarily, reducing how much it wanders.</p><p>Evidence: <br />Ghost Orbs, Freezing Temperatures, DOTS Projector</p>",
+        visible: true,
+      },
+      {
+        id: 17,
+        name: 'Obake',
+        evidence: ['orb', 'emf5', 'prints'],
+        description:
+          '<p>Unique Strengths: <br />When interacting with the environment, an Obake will rarely leave a trace.</p><p>Weaknesses: <br />Sometimes this ghost will shapeshift, leaving behind unique evidence.</p><p>Evidence: <br />Ghost Orbs, EMF Level 5, Finger Prints</p>',
+        visible: true,
+      },
+      {
+        id: 18,
+        name: 'The Twins',
+        evidence: ['box', 'emf5', 'freezing'],
+        description:
+          '<p>Unique Strengths: <br />Either Twin can be angered and initiate an attack on their prey.</p><p>Weaknesses: <br />The Twins will often interact with the environment at the same time.</p><p>Evidence: <br />EMF Level 5, Spirit Box, Freezing Temperatures</p>',
+        visible: true,
+      },
+      {
+        id: 19,
+        name: 'Onryo',
+        evidence: ['box', 'orb', 'freezing'],
+        description:
+          '<p>Unique Strengths: <br />Extinguishing a flame can cause an Onryo to attack.</p><p>Weaknesses: <br />When threatened, this ghost will be less likely to attack.</p><p>Evidence: <br />Spirit Box, Ghost Orbs, Freezing Temperatures</p>',
+        visible: true,
+      },
+      {
+        id: 20,
+        name: 'Raiju',
+        evidence: ['orb', 'emf5', 'dots'],
+        description:
+          '<p>Unique Strengths: <br />Raiju can siphon power from nearby electrical devices, making it move faster.</p><p>Weaknesses: <br />Raiju are constantly disrupting electronic equipment, making it easier to track when attacking.</p><p>Evidence: <br />EMF Level 5, Ghots Orbs, D.O.T.S. Projector</p>',
+        visible: true,
+      },
+      {
+        id: 21,
+        name: 'The Mimic',
+        evidence: ['box', 'prints', 'emf5', 'orb'],
+        description:
+          "<p>Unique Strengths: <br />We're unsure what this ghost is capable of. Be careful.</p><p>Weaknesses: <br />Several reports have noted ghost orb sightings near mimics.</p><p>Evidence: <br />EMF Level 5, Finger Prints, Spirit Box</p>",
+        visible: true,
+      },
+    ];
     return { evidence, ghosts };
   }
 

@@ -14,6 +14,7 @@ import { reducer } from './ghosts/store/ghosts-reducer';
 import { ExamplesComponent } from './examples/examples.component';
 import { OuijaComponent } from './ouija/ouija.component';
 import { SpiritBoxComponent } from './spirit-box/spirit-box.component';
+import { CursedItemsComponent } from './cursed-items/cursed-items.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SpiritBoxComponent } from './spirit-box/spirit-box.component';
     GhostDetailComponent,
     ExamplesComponent,
     OuijaComponent,
-    SpiritBoxComponent
+    SpiritBoxComponent,
+    CursedItemsComponent
   ],
   imports: [
     BrowserModule,

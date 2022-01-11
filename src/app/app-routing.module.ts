@@ -1,3 +1,4 @@
+import { CursedItemsComponent } from './cursed-items/cursed-items.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EvidenceComponent } from './evidence/evidence.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'spiritbox', component: SpiritBoxComponent},
   { path: 'ouija', component: OuijaComponent },
   { path: 'examples', component: ExamplesComponent },
+  { path: 'cursed', component: CursedItemsComponent }
 ];
 
 @NgModule({

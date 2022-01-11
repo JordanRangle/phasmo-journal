@@ -1,0 +1,35 @@
+<h2>Cursed Items</h2>
+
+<p>Each map now contains 1 of 6 cursed items. Each cursed item spawns at a specific location on each map.</p>
+
+<ol>
+    <li>
+        <p><em>Haunted Mirror</em></p>
+        <p>Rotates in a 360 circle showing you the ghosts' room. The mirror drains 7%~ sanity per second. After a few seconds of using the mirror, the mirror will break triggering a hunt.</p>
+    </li>
+    <li>
+        <p><em>Music Box</em></p>
+        <p>If you are in or near the ghosts room, you will hear the ghost "sing". After 7 seconds or when the ghost reaches you, a hunt will start.</p>
+    </li>
+    <li>
+        <p><em>Ouija Board</em></p>
+        <p>Used to communiate with the ghost at the cost of sanity. </p>
+    </li>
+    <li>
+        <p><em>Summoning Circle</em></p>
+        <p>Summons and locks the ghost into the circle for 2 seconds, then starts a hunt.</p>
+    </li>
+    <li>
+        <p><em>Tarot Cards</em></p>
+        <p>Each deck inludes 10 random cards. Each card can be 1 of 10 cards, each with unique effects.</p>
+        <ul>
+            <li *ngFor="let card of tarotCards">
+                <p><em>{{card.title}}</em>: {{card.description}}</p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <p><em>Voodoo Doll</em></p>
+        <p>Using the voodoo doll forces the ghost to preform an interaction. Useful when trying to trigger finger prints or blowing out a candel. When the pin in the voodoo doll's heart is pushed in, an hunt is triggered.</p>
+    </li>
+</ol>

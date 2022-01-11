@@ -9,6 +9,14 @@ export class OuijaComponent implements OnInit {
 
   ouijaQuestions = [
     {
+      title: "Special",
+      hint: "You can force trigger a hunt by playing hide and seek with the ghost. When playing on nightmare the board can give you a general idea of what your sanity level is.",
+      questions: [
+        "Hide and seek?",
+        "What is my sanity?"
+      ]
+    },
+    {
       title: "Location",
       hint: "The location given will be the currently occupied room of the Ghost. In the Setup Phase it is Ghost Room, so using the Ouija Board earlier is one sure way to identify it. However, once the Setup Phase ends, the Ghost will (most likely) begin roaming, at which point asking for its location on the Board will give out its current location at that time.",
       questions: [
